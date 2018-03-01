@@ -1,0 +1,32 @@
+html,
+body {
+    position: relative;
+    font-family: $regular_font;
+}
+
+body {
+    padding-bottom: 65px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    color: $gray_color;
+    &,
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+    &:hover,
+    &:focus {
+        color: $primary_color;
+    }
+    transition: ease .3s;
+}
+p {
+    font-size: 16px;
+    line-height: 1.8;
+}

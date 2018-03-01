@@ -1,0 +1,17 @@
+.list {
+    li {
+        span {
+            line-height: 1.7;
+            &:first-child {
+                color: $primary_color;
+                font-size: 30px;
+                font-family: $black_font;
+            }
+            &:last-child {
+                font-size: 22px;
+                font-family: $regular_font;
+                color: $light_gray_color;
+            }
+        }
+    }
+}

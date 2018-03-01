@@ -1,0 +1,10 @@
+.map {
+    margin-bottom: 20px;
+    .spot-subpage & {
+        &,
+        & img {
+            height: 542px;
+            width: 100%;
+        }
+    }
+}

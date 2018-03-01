@@ -1,0 +1,25 @@
+.breadcrumbs {
+    padding-left: 45px;
+    li {
+        display: inline-block;
+        a {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &:after {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            content: "\f105";
+        }
+        &:last-child {
+            &:after {
+                display: none; 
+            }
+        }
+        &:first-child {
+            a{
+                padding-left: 0;
+            }
+        }
+    }
+}

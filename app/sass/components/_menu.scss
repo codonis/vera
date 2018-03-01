@@ -1,0 +1,55 @@
+.menu {
+    margin-top: 40px;
+    &__list-item {
+        display: inline-block;
+        position: relative;
+    }
+    &__link {
+        margin-right: 15px;
+        margin-left: 15px;
+        font-size: 14px;
+        padding: 15px 0;
+        text-align: center;
+        &:after {
+            content: ' ';
+            display: inline-block;
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow:inset 3px 0px 3px 0px rgba(255,255,255,.4);
+            width: 0;
+            height: 2px;
+            background-color: rgba($counter_color, 0.5);
+            transition: ease .3s;
+        }
+        &.no-after{
+            &:after{
+                display: none;
+            }
+        }
+        &:hover {
+            &:after {
+                width: 80%;
+            }
+        }
+    }
+    &__btn {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+    &__icon {
+        display: block;
+        position: relative;
+        top: 0px;
+        float: left;
+        left: 15px;
+        margin-right: 5px;
+        &_submenu {
+            font-size: 18px;
+            position: relative;
+            top: 2px;
+            right: 0;
+        }
+    }
+}

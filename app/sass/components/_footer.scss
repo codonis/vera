@@ -1,0 +1,60 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 3;
+    .foot-inner {
+        min-height: 60px;
+        margin: 0 45px;
+        background-color: $primary_color;
+        padding: 15px 20px;
+        h5 {
+            color: #fff;
+            float: left;
+        }
+    }
+    li {
+        display: inline-block;
+        a {
+            color: #fff;
+            &:hover,
+            &:focus,
+            &:hover i,
+            &:focus i {
+                transition: .3s;
+                color: $counter_color;
+            }
+            i {
+                font-size: 30px;
+                color: #fff;
+            }
+        }
+    }
+    .pull-right {
+        width: 55%;
+        text-align: right;
+        li:last-child {
+            a {
+                margin-right: 0;
+            }
+        }
+        a {
+            font-size: 15px;
+            font-family: $light_font;
+            margin: 0 15px;
+            span {
+                position: relative;
+                top: -5px;
+            }
+        }
+    }
+    .pull-left {
+        width: 40%;
+        li {
+            a {
+                display: block;
+                margin: 0 13px;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.top-entry {
+    width: 80%;
+    font-family: $regular_font;
+    text-align: justify;
+    margin: 0 auto 55px auto;
+    color: $gray_color;
+    p {
+        line-height: 2;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,14 @@
+.btn{
+    display: inline;
+    padding: 10px 50px;
+    border-radius: 8px;
+    color: #ffffff;
+    transition: .3s ease;
+    &:hover{
+        background-color: $gray_color;
+        color: #ffffff;
+    }
+    &_green{
+        background-color: $counter_color;
+    }
+}
