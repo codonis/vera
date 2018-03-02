@@ -1,5 +1,11 @@
 .map {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    @include breakpoint(huges) {
+        float: left;
+        img{
+            height: 260px;
+        }
+    }
     .spot-subpage & {
         &,
         & img {
@@ -7,4 +13,5 @@
             width: 100%;
         }
     }
+    
 }

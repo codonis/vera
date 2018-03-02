@@ -1,4 +1,10 @@
 @font-face {
+    font-family: 'SinkinSansThin';
+    src: url('../fonts/SinkinSans-100Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'SinkinSansLt';
     src: url('../fonts/SinkinSans-300Light.woff') format('woff');
     font-weight: normal;
@@ -7,6 +13,12 @@
 @font-face {
     font-family: 'SinkinSansRg';
     src: url('../fonts/SinkinSans-400Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SinkinSansMd';
+    src: url('../fonts/SinkinSans-500Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

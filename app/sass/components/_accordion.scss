@@ -1,7 +1,7 @@
 .accordion {
     //width: 97.2%;
     margin: 0 45px;
-    height: 79vh;
+    height: 74vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -12,6 +12,9 @@
     -webkit-box-pack: stretch;
     -ms-flex-pack: stretch;
     justify-content: stretch;
+    @include breakpoint(huges) {
+        height: 63vh;
+    }
 }
 
 .slide {
@@ -113,25 +116,35 @@
         z-index: 2;
         transform-origin: bottom right;
         transform: rotate(-90deg);
-        top: 2%;
+        top: -21%;
+        left: -144%;
+        width: 168%;
+        /* top: 2%;
         left: -52%;
-        width: 140%;
+        width: 140%; */
         text-shadow: -4px 0 0 rgba(0, 0, 0, 0.6);
         transition: .4s ease-in-out;
+        @include breakpoint(huges) {
+            top: -11%;
+            left: -130%;
+            width: 168%;
+            font-size: 21px;
+        }
     }
 }
 
 [data-accordion-slide="1"] .inside {
-    background-image: url("../images/adam.png"); //background-position: 50% 50%;
+    background-position: 50% 10%;
 }
 
-[data-accordion-slide="2"] .inside {
-    background-image: url("../images/slide2.png"); //background-position: 50% 50%;
+
+/* [data-accordion-slide="2"] .inside {
+     //background-position: 50% 50%;
 }
 
 [data-accordion-slide="3"] .inside {
-    background-image: url("../images/slide3.png"); //background-position: 100% 50%;
-}
+     //background-position: 100% 50%;
+} */
 
 .hide-texts {
     opacity: 0;
@@ -142,4 +155,13 @@
     width: 60%;
     top: 70%;
     font-family: $bold_font;
+    @include breakpoint(huges) {
+        top: 60%;
+        h2 {
+            font-size: 14px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
 }

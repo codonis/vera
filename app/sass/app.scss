@@ -4,6 +4,7 @@
 @import "config/sprite";
 @import "config/fonts";
 @import "config/icons";
+@import "config/animate";
 
 //base
 @import "base";
@@ -19,7 +20,7 @@
 @import "components/subtitle";
 @import "components/list";
 @import "components/map";
-@import "components/slider";
+@import "components/accordion";
 @import "components/footer";
 @import "components/breadcrumbs";
 @import "components/hero";
@@ -27,6 +28,9 @@
 @import "components/spec";
 @import "components/crew";
 @import "components/b-a";
+@import "components/filter";
+@import "components/categories";
+
 
 
 //utilities

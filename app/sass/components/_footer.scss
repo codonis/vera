@@ -4,8 +4,10 @@ footer {
     width: 100vw;
     z-index: 3;
     .foot-inner {
-        min-height: 60px;
+        min-height: 30px;
         margin: 0 45px;
+        border-bottom: 45px solid #fff;
+        box-sizing: content-box;
         background-color: $primary_color;
         padding: 15px 20px;
         h5 {

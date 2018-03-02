@@ -1,0 +1,115 @@
+.filter {
+    background-color: $lightest_gray_color;
+    width: 80%;
+    margin: 15px auto;
+    h3 {
+        margin: 0;
+        position: relative;
+        padding-left: 65px;
+        padding-right: 45px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 18px;
+        line-height: 1.1;
+        cursor: pointer;
+        font-family: $medium_font;
+        &.open {
+            &:after {
+                content: '\f056';
+                transform: rotate(0deg);
+                font-weight: 900;
+            }
+        }
+        &:after {
+            content: '\f057';
+            position: absolute;
+            top: 10px;
+            left: 25px;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 400;
+            transform: rotate(45deg);
+            font-size: 20px;
+        }
+    }
+    &-content {
+        display: none;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 30px;
+    }
+    h4 {
+        font-size: 18px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        color: $counter_color;
+        font-family: $light_font;
+    }
+    .input-group {
+        padding: 5px 0;
+        label {
+            margin: 0 10px;
+            font-size: 12px;
+            font-family: $light_font;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            background-color: #fff;
+            border: 1px solid $light_gray_color;
+            border-radius: 100%;
+            position: relative;
+            top: 3px;
+            margin: 0;
+            &:checked {
+                &:after {
+                    display: block;
+                }
+            }
+            &:after {
+                content: ' ';
+                width: 7px;
+                height: 7px;
+                background-color: $gray_color;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 100%;
+                display: none;
+            }
+        }
+    }
+    &-results {
+        li {
+            a {
+                border: 1px solid $lighter_gray_color;
+                border-radius: 4px;
+                min-height: 400px;
+                display: inline-block;
+                width: 100%;
+                margin: 15px 0;
+                padding: 10px;
+                h3,
+                h4 {
+                    font-size: 18px;
+                    font-family: $bold_font;
+                }
+                h3 {
+                    margin: 0;
+                    color: $primary_color;
+                }
+                h4 {
+                    span {
+                        font-family: $light_font;
+                    }
+                }
+                img {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

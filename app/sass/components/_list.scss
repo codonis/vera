@@ -1,15 +1,23 @@
 .list {
+    @include breakpoint(huges) {
+        float: left;
+        margin-left: 15px;
+        width: 45%;
+    }
     li {
         span {
             line-height: 1.7;
             &:first-child {
                 color: $primary_color;
-                font-size: 30px;
+                font-size: 20px;
                 font-family: $black_font;
             }
             &:last-child {
                 font-size: 22px;
                 font-family: $regular_font;
+                color: $light_gray_color;
+            }
+            strong {
                 color: $light_gray_color;
             }
         }

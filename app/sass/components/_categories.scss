@@ -1,0 +1,23 @@
+.categories {
+    margin-top: 60px;
+    li{
+        margin-bottom: 50px;
+        &:hover p {
+            color: $counter_color;
+        }
+    }
+    img {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    h4 {
+        @include h2;
+        &:after {
+            @include h2After($counter_color);
+        }
+    }
+    p{
+        font-size: 18px;
+        color: $light_gray_color;
+    }
+}

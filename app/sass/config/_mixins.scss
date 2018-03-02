@@ -1,40 +1,57 @@
-@mixin breakpoint($point) {
-    @if $point==huges {
-        @media (max-width: 1366px) {
-            @content;
+    @mixin breakpoint($point) {
+        @if $point==huges {
+            @media (max-width: 1366px) {
+                @content;
+            }
         }
-    }
-    @else if $point==larges {
-        @media (max-width: 1024px) {
-            @content;
+        @else if $point==larges {
+            @media (max-width: 1024px) {
+                @content;
+            }
         }
-    }
-    @else if $point==mediums {
-        @media (max-width: 768px) {
-            @content;
+        @else if $point==mediums {
+            @media (max-width: 768px) {
+                @content;
+            }
         }
-    }
-    @else if $point==smalls {
-        @media (max-width: 480px) {
-            @content;
+        @else if $point==smalls {
+            @media (max-width: 480px) {
+                @content;
+            }
         }
+    } //VERTICAL ALIGN
+    @mixin align {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-}
 
-//VERTICAL ALIGN
-@mixin align {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-@mixin vAlign {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-@mixin hAlign {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
+    @mixin vAlign {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @mixin hAlign {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @mixin h2After ($bgc) {
+        content: ' ';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: $bgc;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    @mixin h2 {
+        font-size: 18px;
+        font-family: $bold_font;
+        color: $gray_color;
+        margin: 0;
+    }
