@@ -1,6 +1,10 @@
 .map {
     margin-bottom: 10px;
+    width: 100%;
+    height: 360px;
     @include breakpoint(huges) {
+        width: 45%;
+        height: 260px;
         float: left;
         img{
             height: 260px;

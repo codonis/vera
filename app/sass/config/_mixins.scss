@@ -19,7 +19,16 @@
                 @content;
             }
         }
-    } //VERTICAL ALIGN
+    }
+    
+    
+    @mixin customBreakpoint ($point) {
+        @media (max-width: $point) {
+            @content;
+        }
+    }
+    
+    //VERTICAL ALIGN
     @mixin align {
         position: absolute;
         top: 50%;

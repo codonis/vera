@@ -130,6 +130,10 @@
             width: 168%;
             font-size: 21px;
         }
+        @include customBreakpoint(1600px) {
+            top: 4px;
+            left: -140%;
+        }
     }
 }
 
@@ -160,7 +164,7 @@
         h2 {
             font-size: 14px;
         }
-        p{
+        p {
             font-size: 12px;
         }
     }
