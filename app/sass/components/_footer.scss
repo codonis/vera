@@ -72,7 +72,6 @@ footer {
     }
     @include customBreakpoint(1024px) {
         .pull-right {
-            
             width: 64%;
             a span {
                 font-size: 13px;
@@ -95,5 +94,15 @@ footer {
         margin-left: 15px;
         display: none;
         cursor: pointer;
+    }
+    .chat {
+        // transition:.6s .3s, width .3s .5s, opacity 0 .3s;
+        width: 52px;
+        /* transition: width .5s; */
+        &.clicked {
+            width: 0%;
+            opacity: 0; //visibility: hidden;
+            transition: width .5s .5s, opacity .3s;
+        }
     }
 }

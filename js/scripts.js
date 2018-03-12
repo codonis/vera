@@ -1,3 +1,7 @@
+$('.chat a').click(function (e) {
+    e.preventDefault();
+    $(this).parent().addClass('clicked');
+});
 $(document).ready(function () {
     $('.inside').each(function () {
         var insideText = $(this).find('h1').text();

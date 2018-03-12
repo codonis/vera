@@ -3120,6 +3120,14 @@ footer {
     margin-left: 15px;
     display: none;
     cursor: pointer; }
+  footer .chat {
+    width: 52px;
+    /* transition: width .5s; */ }
+    footer .chat.clicked {
+      width: 0%;
+      opacity: 0;
+      -webkit-transition: width .5s .5s, opacity .3s;
+      transition: width .5s .5s, opacity .3s; }
 
 .breadcrumbs {
   padding-left: 60px;
