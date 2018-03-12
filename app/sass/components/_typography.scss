@@ -1,0 +1,56 @@
+.title {
+    font-size: 28px;
+    line-height: 1;
+    color: $light_gray_color;
+    margin: 0;
+    @include customBreakpoint(1024px) {
+        font-size: 21px;
+    }
+}
+
+.subtitle {
+    position: relative;
+    margin-top: 0;
+    &_pl {
+        padding-left: 150px;
+        &_small {
+            padding-left: 115px;
+        }
+        @include customBreakpoint(1024px) {
+            padding-left: 120px;
+            &_small {
+                padding-left: 96px;
+                margin-top: 8px;
+            }
+        }
+        
+    }
+    &__small {
+        font-size: 22px;
+        display: block;
+    }
+    &_prime-color {
+        color: $primary_color;
+        font-family: $black_font;
+    }
+    &_big {
+        font-size: 58px;
+    }
+    &_medium {
+        font-size: 55px;
+    }
+    &_gray {
+        color: $light_gray_color;
+    }
+    @include customBreakpoint(1024px) {
+        &__small {
+            font-size: 18px;
+        }
+        &_big {
+            font-size: 48px;
+        }
+        &_medium {
+            font-size: 43px;
+        }
+    }
+}

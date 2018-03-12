@@ -4,15 +4,16 @@ footer {
     width: 100vw;
     z-index: 3;
     .foot-inner {
-        min-height: 30px;
+        min-height: 20px;
         margin: 0 45px;
         border-bottom: 25px solid #fff;
         box-sizing: content-box;
         background-color: $primary_color;
-        padding: 15px 20px;
+        padding: 10px 20px;
         h5 {
             color: #fff;
             float: left;
+            margin: 3px 0;
         }
     }
     li {
@@ -27,7 +28,7 @@ footer {
                 color: $counter_color;
             }
             i {
-                font-size: 30px;
+                font-size: 20px;
                 color: #fff;
             }
         }
@@ -35,6 +36,7 @@ footer {
     .pull-right {
         width: 55%;
         text-align: right;
+        position: relative;
         li:last-child {
             a {
                 margin-right: 0;
@@ -46,17 +48,52 @@ footer {
             margin: 0 15px;
             span {
                 position: relative;
-                top: -5px;
+                top: 0px;
             }
+        }
+        @media screen and (max-width:1280px) and (max-height:933px) {
+            width: 60%;
         }
     }
     .pull-left {
         width: 40%;
         li {
+            opacity: 1;
             a {
                 display: block;
-                margin: 0 13px;
+                margin: 0 5px;
             }
         }
+        li:first-child {
+            a {
+                margin-left: 15px;
+            }
+        }
+    }
+    @include customBreakpoint(1024px) {
+        .pull-right {
+            
+            width: 64%;
+            a span {
+                font-size: 13px;
+            }
+            /* .s-hide{
+                transition: .3s;
+                opacity:0;
+                width: 0;
+            } */
+        }
+        .pull-left {
+            width: 32%;
+        }
+    }
+    .scroll-up {
+        position: absolute;
+        top: 0;
+        right: -10px;
+        display: block;
+        margin-left: 15px;
+        display: none;
+        cursor: pointer;
     }
 }

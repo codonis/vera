@@ -3,6 +3,18 @@ $(document).ready(function () {
         var insideText = $(this).find('h1').text();
         $(this).find('h2').empty().text(insideText);
     });
+    var footerTellink = $('#footerTel').attr('href');
+    var footerMailLink = $('#footerMail').attr('href');
+    var footerTel = $('#footerTel span').text();
+    var footerMail = $('#footerMail span').text();
+    var contactTel = $('#contactTel');
+    var contactTelElText = $('#contactTel p');
+    var contactMail = $('#contactMail');
+    var contactMailElText = $('#contactMail p');
+    contactTel.attr('href', footerTellink);
+    contactMail.attr('href', footerMailLink);
+    contactMailElText.text(footerMail);
+    contactTelElText.text(footerTel);
 });
 $('.filter h3').click(function () {
     $(this).toggleClass('open');
@@ -291,9 +303,9 @@ var stls = [
 ]
 
 var markers = [
-   // [1002, -14.2350040, -51.9252800],
-   // [2000, -34.028249, 151.157507],
-   // [123, 39.0119020, -98.4842460],
+    // [1002, -14.2350040, -51.9252800],
+    // [2000, -34.028249, 151.157507],
+    // [123, 39.0119020, -98.4842460],
     [50, 48.8566140, 2.3522220],
     [22, 38.7755940, -9.1353670],
     [12, 12.0733335, 52.8234367],
@@ -402,7 +414,10 @@ function generateIcon(number, callback) {
     }));
 }
 
-initializeMaps();
+
+if (document.getElementById('map_canvas')) {
+    initializeMaps();
+}
 
 $(document).ready(function () {
     $(".menu__list-item").hover(
@@ -413,5 +428,30 @@ $(document).ready(function () {
             $(this).children("ul").stop().slideUp('medium');
         }
     );
+    if($('.menu__list-item .submenu')) {
+        $('.submenu').each(function () {
+            var link = $(this).siblings('a');
+            var icon = '<i class="fa fa-angle-down menu__icon_submenu"></i>';
+            link.addClass('no-after');
+            link.append(icon);
+        });
+    }
+});
+var scrollUpBtn = $('.scroll-up');
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() > 120) {
+        scrollUpBtn.show(300);
+        /* scrollUpBtn.parent().removeClass('s-hide'); */
+    } else {
+        scrollUpBtn.hide(300);
+        /* scrollUpBtn.parent().addClass('s-hide'); */
+        
+    }
+});
+scrollUpBtn.click(function () {
+    $('html,body').animate({
+        scrollTop: 0
+    }, 500);
 });
 new WOW().init();

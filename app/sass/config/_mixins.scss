@@ -20,15 +20,12 @@
             }
         }
     }
-    
-    
+
     @mixin customBreakpoint ($point) {
         @media (max-width: $point) {
             @content;
         }
-    }
-    
-    //VERTICAL ALIGN
+    } //VERTICAL ALIGN
     @mixin align {
         position: absolute;
         top: 50%;
@@ -63,4 +60,41 @@
         font-family: $bold_font;
         color: $gray_color;
         margin: 0;
+    } 
+    
+    
+    
+    
+    //limited texts
+    @mixin limitTexts($height:1.2em, $gradient:linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 80%), $afterWidth:50%,$lineLenght:1) {
+        overflow: hidden;
+        position: relative;
+        height: $height;
+        display: -webkit-box;
+        -webkit-line-clamp: $lineLenght;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        text-overflow: ellipsis;
+        &:after {
+            content: "";
+            text-align: right;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: $afterWidth;
+            height: $height;
+            background: $gradient;
+        }
+        @supports (-webkit-line-clamp: $lineLenght) {
+            & {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $lineLenght;
+                -webkit-box-orient: vertical;
+            }
+            &:after {
+                display: none;
+            }
+        }
     }

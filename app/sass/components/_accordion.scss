@@ -1,7 +1,6 @@
 .accordion {
     //width: 97.2%;
     margin: 0 45px;
-    height: 74vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -12,8 +11,15 @@
     -webkit-box-pack: stretch;
     -ms-flex-pack: stretch;
     justify-content: stretch;
-    @include breakpoint(huges) {
+    height: 74vh;
+    @media screen and (max-width: 1600px) {
+        height: 69vh;
+    }
+    @media screen and (max-width:1366px) {
         height: 63vh;
+    }
+    @media screen and (max-width:1280px) {
+        height: 61vh;
     }
 }
 
@@ -124,15 +130,30 @@
         width: 140%; */
         text-shadow: -4px 0 0 rgba(0, 0, 0, 0.6);
         transition: .4s ease-in-out;
+        @include customBreakpoint(1680px) {
+            top: 6%;
+        }
+        @include customBreakpoint(1600px) {
+            top: -35%;
+            width: 190%;
+            left: -156%;
+        }
+        @include customBreakpoint(1440px) {
+            top: -5%;
+            left: -137%;
+            width: 169%;
+        }
         @include breakpoint(huges) {
-            top: -11%;
-            left: -130%;
+            top: -27%;
+            left: -135%;
             width: 168%;
             font-size: 21px;
         }
-        @include customBreakpoint(1600px) {
-            top: 4px;
-            left: -140%;
+        @media screen and (max-width:1280px) {
+            top: -26%;
+        }
+        @media screen and (max-width:1024px) {
+            top: 4%;
         }
     }
 }
@@ -159,6 +180,21 @@
     width: 60%;
     top: 70%;
     font-family: $bold_font;
+    li {
+        @include limitTexts($lineLenght: 1, $height:1.6em);
+    }
+    @media screen and (max-width:1600px) {
+        top: 57%;
+    }
+    @include customBreakpoint(1440px) {
+        top: 68%;
+        h2 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
     @include breakpoint(huges) {
         top: 60%;
         h2 {
@@ -167,5 +203,14 @@
         p {
             font-size: 12px;
         }
+    }
+    @media screen and (max-width:1280px) {
+        top: 73%;
+    }
+    @media screen and (max-width:1024px) {
+        top: 67%;
+    }
+    @media screen and (max-height:709px) {
+        top: 63%;
     }
 }

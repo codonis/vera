@@ -2,14 +2,41 @@
     margin-bottom: 10px;
     width: 100%;
     height: 360px;
+    border: 1px solid $lighter_gray_color;
+    @include customBreakpoint(1600px) {
+        width: 45%;
+        height: 260px;
+        float: left;
+    }
     @include breakpoint(huges) {
         width: 45%;
         height: 260px;
         float: left;
-        img{
+        img {
             height: 260px;
         }
     }
+
+    /* @media screen and (max-width:1280px) {
+        float: none;
+        width: 100%;
+    } */
+    @include customBreakpoint(1024px ) {
+        width: 45%;
+        height: 260px;
+        float: left;
+        img {
+            height: 260px;
+        }
+    }
+    /* @media screen and (max-height:709px) {
+        width: 45%;
+        height: 260px;
+        float: left;
+        img {
+            height: 260px;
+        }
+    } */
     .spot-subpage & {
         &,
         & img {
@@ -17,5 +44,4 @@
             width: 100%;
         }
     }
-    
 }
