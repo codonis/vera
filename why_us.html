@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" ng-app="app" ng-controller="mainCtrl">
+
 
 <head>
     <meta charset="UTF-8">
@@ -17,114 +18,141 @@
 <body>
     <!-- Header start -->
     <header class="header container-fluid">
-        <div class="header__logo">
-            <a href="#" class="logo">
-                <img src="images/logo.png" alt="" class="logo__img">
-            </a>
-        </div>
-        <div class="pull-right">
-            <nav>
-                <ul class="menu">
-                    <li class="menu__list-item">
-                        <a href="index.html" class="menu__link">
-                            HOME
-                        </a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a href="about_us.html" class="menu__link">
-                            ABOUT US
-                            
-                        </a>
-                        <ul class="submenu">
-                            <li class="submenu__list-item">
-                                <a href="why_us.html" class="submenu__link">
-                                    Why Us
-                                </a>
-                            </li>
-                            <li class="submenu__list-item">
-                                <a href="our_doctors.html" class="submenu__link">
-                                    Our Doctors
-                                </a>
-                            </li>
-                            <li class="submenu__list-item">
-                                <a href="contact.html" class="submenu__link">
-                                    Contact
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__list-item">
-                        <a href="detail.html" class="menu__link">
-                            PROCEDURES
+    <div class="header__logo">
+        <a href="#" class="logo">
+            <img ng-if="desktop" src="images/logo.png" alt="" class="logo__img">
+            <img ng-if="mobile" src="images/mobile-logo.png" alt="" class="logo__img">
+        </a>
+    </div>
+    <div class="pull-right">
+        <nav>
+            <ul id="menu" class="menu">
+                <li class="menu__list-item">
+                    <a href="index.html" class="menu__link">
+                        HOME
+                    </a>
+                </li>
+                <li class="menu__list-item">
+                    <a href="about_us.html" class="menu__link">
+                        ABOUT US
 
-                        </a>
-                        <ul class="submenu">
-                            <li class="submenu__list-item">
-                                <a href="#" class="submenu__link">
-                                    Link 1
-                                </a>
-                            </li>
-                            <li class="submenu__list-item">
-                                <a href="#" class="submenu__link">
-                                    Link 2
-                                </a>
-                            </li>
-                            <li class="submenu__list-item">
-                                <a href="#" class="submenu__link">
-                                    Link 3
-                                </a>
-                            </li>
-                            <li class="submenu__list-item">
-                                <a href="#" class="submenu__link">
-                                    Link 4
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__list-item">
-                        <a href="blog.html" class="menu__link">
-                            BLOG
-                        </a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a href="#" class="menu__link">
-                            <span class="en_flag menu__icon"><img src="images/en_flag.png" alt=""></span>ENGLISH
-                        </a>
-                        <ul class="submenu">
-                            <li class="submenu__list-item">
-                                <a href="#" class="submenu__link">
-                                    <span class="tr_flag menu__icon"></span>TÜRKÇE
-                                </a>
-                            </li>
-                            <li class="submenu__list-item">
-                                <a href="#" class="submenu__link">
-                                    <span class="es_flag menu__icon"></span>SPAIN
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="menu__list-item">
-                        <a href="#" class="menu__btn btn btn_green">
-                            ENQUIRE
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu__list-item">
+                            <a href="why_us.html" class="submenu__link">
+                                Why Us
+                            </a>
+                        </li>
+                        <li class="submenu__list-item">
+                            <a href="our_doctors.html" class="submenu__link">
+                                Our Doctors
+                            </a>
+                        </li>
+                        <li class="submenu__list-item">
+                            <a href="contact.html" class="submenu__link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__list-item">
+                    <a href="detail.html" class="menu__link">
+                        PROCEDURES
+
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu__list-item">
+                            <a href="#" class="submenu__link">
+                                Link 1
+                            </a>
+                        </li>
+                        <li class="submenu__list-item">
+                            <a href="#" class="submenu__link">
+                                Link 2
+                            </a>
+                        </li>
+                        <li class="submenu__list-item">
+                            <a href="#" class="submenu__link">
+                                Link 3
+                            </a>
+                        </li>
+                        <li class="submenu__list-item">
+                            <a href="#" class="submenu__link">
+                                Link 4
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__list-item">
+                    <a href="blog.html" class="menu__link">
+                        BLOG
+                    </a>
+                </li>
+                <li class="menu__list-item">
+                    <a href="#" class="menu__link">
+                        <span class="en_flag menu__icon">
+                            <img src="images/en_flag.png" alt="">
+                        </span>ENGLISH
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu__list-item">
+                            <a href="#" class="submenu__link">
+                                <span class="tr_flag menu__icon"></span>TÜRKÇE
+                            </a>
+                        </li>
+                        <li class="submenu__list-item">
+                            <a href="#" class="submenu__link">
+                                <span class="es_flag menu__icon"></span>SPAIN
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu__list-item">
+                    <a href="#" class="menu__btn btn btn_green">
+                        ENQUIRE
+                    </a>
+                </li>
+            </ul>
+            <ul ng-if="mobile" class="menu" id="footerMenu">
+                <li class="menu__list-item">
+                    <a href="index.html" class="menu__link">
+                        <i class="fab fa-whatsapp"></i>WHATSAPP
+                    </a>
+                </li>
+                <li class="menu__list-item">
+                    <a href="index.html" class="menu__link">
+                        <i class="far fa-envelope"></i>MAIL
+                    </a>
+                </li>
+                <li class="menu__list-item">
+                    <a href="index.html" class="menu__link">
+                            <i class="fas fa-map-pin"></i>ADDRESS DESCRIPTION
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <a ng-if="mobile" id="mobileMenu" href="#" class="btn-hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </a>
+</header>
     <!-- Header end -->
 
     <section class="content">
         <div class="container-fluid">
-            <ul class="breadcrumbs">
-                <li>
-                    <a href="#">Homepage</a>
-                </li>
-                <li>
-                    <a href="#">About Us</a>
-                </li>
-            </ul>
+            <div class="breadcrumbs">
+                <ul class="container">
+                    <li>
+                        <a href="#">Homepage</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                </ul>
+            </div>
             <div class="container">
                 <ul class="spec clearfix">
                     <li class="col-sm-3">
@@ -154,13 +182,13 @@
                         </a>
                     </li>
                 </ul>
-                
+
             </div>
 
         </div>
     </section>
     <!-- Footer start-->
-    <footer>
+    <footer ng-if="desktop">
     <div class="container-fluid">
         <div class="foot-inner">
             <div class="pull-left">
@@ -225,48 +253,64 @@
                             <i class="fa fa-comments" aria-hidden="true"></i>
                         </a>
                     </li>
-
-                    <li>
-                        <a class="scroll-up">
-                            <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
-<div class="mesagge">
-    <div class="mesagge-header">
-        <span class="mesagge-icon">
+<div class="mobile-footer" ng-if="mobile">
+    
+    <a href="#" id="mobileFooterMenu" class="btn-hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+        <span class="hamburger-text">Communication</span>
+    </a>
+</div>
+<div ng-if="desktop" class="messagge">
+    <div class="messagge-header">
+        <span class="messagge-icon">
             <i class="fa fa-comments" aria-hidden="true"></i>
         </span>
-        <span class="mesagge-title">
+        <span class="messagge-title">
             Şimdi bize mail gönderin!
         </span>
-        <span class="mesagge-close">X</span>
+        <span class="messagge-close">
+            <i class="fa fa-times"></i>
+        </span>
     </div>
-    <div class="mesagge-content">
-        <div class="message-input">
+    <div class="messagge-content">
+        <div class="messagge-input">
             <input type="text" name="ad" id="ad">
         </div>
-        <div class="message-input">
+        <div class="messagge-input">
             <input type="mail" name="mail" id="mail">
         </div>
-        <div class="message-input">
+        <div class="messagge-input">
             <input type="tel" name="tel" id="tel">
         </div>
-        <div class="message-input">
+        <div class="messagge-input">
             <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
         </div>
     </div>
+    <div class="messagge-footer">
+        <button class="btn btn-messagge" type="submit">
+            <i class="fa fa-paper-plane"></i><span>Mail Gönder</span>
+        </button>
+    </div>
 </div>
+<a class="scroll-up">
+    <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+</a>
 <!-- Scripts here -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/wow.js"></script>
+<script src="js/d3.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/match-media.js"></script>
+<script src="js/mainCtrl.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2V7XQtDZSOvcJzylGchYrL8nqzfsTsFg"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 <script src="js/scripts.js"></script>
     <!-- Footer end -->
 </body>

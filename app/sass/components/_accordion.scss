@@ -21,6 +21,15 @@
     @media screen and (max-width:1280px) {
         height: 61vh;
     }
+    @include customBreakpoint(768px) {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        left: 0;
+        margin: 0;
+        display: block;
+    }
 }
 
 .slide {
@@ -34,6 +43,20 @@
     display: -ms-flexbox;
     display: flex;
     border-left: 4px solid #fff;
+    @include customBreakpoint(768px) {
+        border: none;
+        display: block;
+        position: absolute;
+        height: 100%;
+        opacity: 0;
+        float: none;
+        width: 100%;
+        overflow: auto;
+        &.active {
+            opacity: 1;
+            
+        }
+    }
 }
 
 [data-accordion-slide].slide:hover,
@@ -137,6 +160,7 @@
             top: -35%;
             width: 190%;
             left: -156%;
+            font-size: 32px;
         }
         @include customBreakpoint(1440px) {
             top: -5%;
@@ -153,8 +177,16 @@
             top: -26%;
         }
         @media screen and (max-width:1024px) {
-            top: 4%;
+            top: -2%;
+            font-size: 18px;
         }
+    }
+    @include customBreakpoint(768px) {
+        display: block;
+        height: 50vh;
+        padding: 0;
+        width: 100%;
+        margin: 0;
     }
 }
 
@@ -180,8 +212,15 @@
     width: 60%;
     top: 70%;
     font-family: $bold_font;
-    li {
-        @include limitTexts($lineLenght: 1, $height:1.6em);
+    ul {
+        li {
+            @include limitTexts($lineLenght: 1, $height:1.6em);
+            &:before {
+                content: '◉';
+                position: absolute;
+                left: 30px;
+            }
+        }
     }
     @media screen and (max-width:1600px) {
         top: 57%;
@@ -212,5 +251,51 @@
     }
     @media screen and (max-height:709px) {
         top: 63%;
+    }
+}
+
+.slider-thumb {
+    position: absolute;
+    bottom: 130px;
+    left: 0;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    li {
+        display: inline-block; // width: 25%;
+        margin-left: 15px;
+        margin-right: 15px;
+        a {
+            height: 80px;
+            width: 80px;
+            display: block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 100%;
+        }
+        &.active {
+            a{
+                border:2px solid $primary_color;
+            }
+        }
+    }
+}
+
+@include customBreakpoint(768px) {
+    .content .container-fluid {
+        display: inline-block;
+        height: 50vh;
+        width: 100%;
+        &:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
     }
 }

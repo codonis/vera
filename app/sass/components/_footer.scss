@@ -45,7 +45,7 @@ footer {
         a {
             font-size: 15px;
             font-family: $light_font;
-            margin: 0 15px;
+            margin: 0 8px;
             span {
                 position: relative;
                 top: 0px;
@@ -74,7 +74,7 @@ footer {
         .pull-right {
             width: 64%;
             a span {
-                font-size: 13px;
+                font-size: 11px;
             }
             /* .s-hide{
                 transition: .3s;
@@ -85,24 +85,151 @@ footer {
         .pull-left {
             width: 32%;
         }
-    }
-    .scroll-up {
-        position: absolute;
-        top: 0;
-        right: -10px;
-        display: block;
-        margin-left: 15px;
-        display: none;
-        cursor: pointer;
+        li {
+            a {
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+        .foot-inner {
+            h5 {
+                font-size: 13px;
+            }
+        }
     }
     .chat {
-        // transition:.6s .3s, width .3s .5s, opacity 0 .3s;
-        width: 52px;
-        /* transition: width .5s; */
+        transition: width .5s, opacity .5s .3s;
+        width: 39px;
         &.clicked {
             width: 0%;
-            opacity: 0; //visibility: hidden;
+            opacity: 0;
             transition: width .5s .5s, opacity .3s;
         }
+    }
+}
+
+.messagge {
+    padding: 15px;
+    background-color: #fff;
+    position: fixed;
+    width: 320px;
+    overflow: hidden;
+    bottom: -100%;
+    right: 5%;
+    border-radius: 10px;
+    @extend %standart_box_shadow;
+    z-index: 6;
+    transition: .5s ease-in-out;
+    &.active {
+        bottom: 9%;
+    }
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: -20px;
+        left: -100px;
+        width: 200px;
+        height: 100px;
+        background-color: $primary_color;
+        transform: rotate(-45deg);
+        z-index: -1;
+    }
+    input,
+    textarea {
+        margin-bottom: 15px;
+        border-radius: 8px;
+        background-color: $lightest_gray_color;
+        border: 1px solid $lighter_gray_color;
+        min-height: 35px;
+        padding: 8px;
+        color: $light_gray_color;
+        &:focus {
+            border: 2px solid rgba($primary_color, .5);
+            border-radius: 8px;
+            padding: 7px;
+        }
+    }
+    button,
+    input,
+    textarea {
+        width: 100%;
+        outline-color: transparent;
+    }
+    textarea {
+        border-bottom-right-radius: 0;
+    }
+    button {
+        background-color: $counter_color;
+    }
+    &-header {
+        margin-bottom: 30px;
+    }
+    &-icon {
+        border-radius: 100%;
+        background-color: #fff;
+        @extend %standart_box_shadow;
+        border: 2px solid $primary_color;
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        display: inline-block;
+        i {
+            font-size: 35px;
+            color: $primary_color;
+        }
+    }
+    &-title {
+        padding-left: 15px;
+    }
+    &-close {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 18px;
+        font-family: Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        color: $light_gray_color;
+    }
+}
+
+.scroll-up {
+    position: fixed;
+    top: auto;
+    bottom: 70px;
+    right: 45px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 31px;
+    color: $primary_color;
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s .3s, visibility 0s .3s;
+    }
+    @include customBreakpoint(768px) {
+        z-index: 20;
+        color: #fff;
+        bottom: 5px;
+        right: 15px;
+    }
+}
+
+.mobile-footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: $primary_color;
+    height: 50px;
+    z-index: 10;
+    .hamburger-text {
+        color: #fff;
+        position: absolute;
+        right: -42px;   
+        width: 100%;
+        font-size: 12px;
     }
 }

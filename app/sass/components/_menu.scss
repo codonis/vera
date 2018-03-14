@@ -1,5 +1,6 @@
 .menu {
     margin-top: 40px;
+    list-style: none;
     &__list-item {
         display: inline-block;
         position: relative;
@@ -11,9 +12,9 @@
         padding: 15px 0;
         text-align: center;
         @include customBreakpoint(1024px) {
-            margin-right: 10px;
-            margin-left: 10px;
-            font-size: 13px;
+            margin-right: 8px;
+            margin-left: 8px;
+            font-size: 12px;
         }
         &:after {
             content: ' ';
@@ -22,14 +23,14 @@
             bottom: -8px;
             left: 50%;
             transform: translateX(-50%);
-            box-shadow:inset 3px 0px 3px 0px rgba(255,255,255,.4);
+            box-shadow: inset 3px 0px 3px 0px rgba(255, 255, 255, .4);
             width: 0;
             height: 2px;
             background-color: rgba($counter_color, 0.5);
             transition: ease .3s;
         }
-        &.no-after{
-            &:after{
+        &.no-after {
+            &:after {
                 display: none;
             }
         }
@@ -50,11 +51,125 @@
         float: left;
         left: 15px;
         margin-right: 5px;
+        @include customBreakpoint(1024px) {
+            left: 8px;
+        }
         &_submenu {
             font-size: 18px;
             position: relative;
             top: 2px;
             right: 0;
+        }
+    }
+    @include customBreakpoint(768px) {
+        position: fixed;
+        bottom: -100vh;
+        left: 0;
+        width: 100vw;
+        padding: 15px;
+        z-index: 9;
+        background-color: #fff;
+        height: 50vh;
+        transition: .3s;
+        overflow: auto;
+        &__list-item {
+            display: block;
+            &:nth-last-child(2) a.menu__link {
+                border-bottom: none;
+                #footerMenu & {
+                    border-bottom: 1px solid $light_gray_color;
+                    
+                }
+            }
+        }
+        &__link {
+            width: 100%;
+            display: block;
+            text-align: left;
+            position: relative;
+            border-bottom: 1px solid $light_gray_color;
+            margin: 0;
+            font-size: 18px;
+            font-family: $bold_font;
+            #footerMenu & {
+                i{
+                    margin-right: 15px;
+                    font-size: 55px;
+                }
+            }
+            &:after {
+                display: none;
+            }
+        }
+        &__icon_submenu {
+            right: 15px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+        &__icon {
+            left: 0;
+            top: -2px;
+        }
+        &__btn.btn {
+            margin-left: 0;
+            width: 100%;
+            display: block;
+        }
+        &.open {
+            bottom: 50px;
+            margin-bottom: 0;
+            transition: .3s;
+        }
+    }
+}
+
+.pagination {
+    li {
+        a {
+            color: $primary_color;
+            &:hover {
+                color: $counter_color;
+            }
+            &.active,
+            &:focus {
+                z-index: 2;
+                color: $counter_color;
+                background-color: #eee;
+                border-color: #ddd;
+            }
+        }
+    }
+}
+
+.submenu {
+    position: absolute;
+    list-style: none;
+    top: 30px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    background-color: $primary_color;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom: none;
+    display: none;
+    .menu__list-item:hover & {
+        border-bottom: 2px solid darken($primary_color, 15%);
+    }
+    &__link {
+        color: lighten($primary_color, 25%);
+        display: block;
+        padding: 10px 30px;
+        border-bottom: 2px solid darken($primary_color, 15%);
+        font-size: 12px;
+        .submenu__list-item:last-child & {
+            border: none;
+        }
+        &:hover {
+            color: #fff;
+            background-color: darken($primary_color, 10%);
         }
     }
 }

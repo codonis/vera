@@ -13,6 +13,9 @@
     &-info {
         grid-area: info;
         padding-right: 30px;
+        ul {
+            list-style: none;
+        }
         li {
             position: relative;
             padding-left: 50px;
