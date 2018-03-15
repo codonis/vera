@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vera Clinic | Hakkımızda</title>
-    <!-- head here -->
+    <!-- head -->
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/fontawesome-all.css">
 <link rel="stylesheet" href="css/styles.css">
@@ -19,9 +19,13 @@
     <!-- Header start -->
     <header class="header container-fluid">
     <div class="header__logo">
-        <a href="#" class="logo">
+        <a href="/" class="logo">
+            <!-- Masaüstünde gösterilecek alan başlangıcı -->
             <img ng-if="desktop" src="images/logo.png" alt="" class="logo__img">
+            <!-- Masaüstünde gösterilecek alan bitişi -->
+            <!-- Mobilde gösterilecek alan başlangıcı -->
             <img ng-if="mobile" src="images/mobile-logo.png" alt="" class="logo__img">
+            <!-- Mobilde gösterilecek alan bitişi -->
         </a>
     </div>
     <div class="pull-right">
@@ -56,28 +60,28 @@
                     </ul>
                 </li>
                 <li class="menu__list-item">
-                    <a href="detail.html" class="menu__link">
+                    <a href="detail_main.html" class="menu__link">
                         PROCEDURES
 
                     </a>
                     <ul class="submenu">
                         <li class="submenu__list-item">
-                            <a href="#" class="submenu__link">
+                            <a href="detail.html" class="submenu__link">
                                 Link 1
                             </a>
                         </li>
                         <li class="submenu__list-item">
-                            <a href="#" class="submenu__link">
+                            <a href="detail.html" class="submenu__link">
                                 Link 2
                             </a>
                         </li>
                         <li class="submenu__list-item">
-                            <a href="#" class="submenu__link">
+                            <a href="detail.html" class="submenu__link">
                                 Link 3
                             </a>
                         </li>
                         <li class="submenu__list-item">
-                            <a href="#" class="submenu__link">
+                            <a href="detail.html" class="submenu__link">
                                 Link 4
                             </a>
                         </li>
@@ -114,35 +118,46 @@
                     </a>
                 </li>
             </ul>
+            <!-- Mobilde gösterilecek alan başlangıcı -->
             <ul ng-if="mobile" class="menu" id="footerMenu">
                 <li class="menu__list-item">
                     <a href="index.html" class="menu__link">
-                        <i class="fab fa-whatsapp"></i>WHATSAPP
+                        <span class="icon-whatsapp">
+                            <img src="images/whatsapp-icon.png" alt="">
+                        </span>WHATSAPP
                     </a>
                 </li>
                 <li class="menu__list-item">
                     <a href="index.html" class="menu__link">
-                        <i class="far fa-envelope"></i>MAIL
+                        <span class="icon-mail">
+                            <img src="images/mail-icon.png" alt="">
+                        </span>MAIL
                     </a>
                 </li>
                 <li class="menu__list-item">
                     <a href="index.html" class="menu__link">
-                            <i class="fas fa-map-pin"></i>ADDRESS DESCRIPTION
+                        <span class="icon-pin">
+                            <img src="images/pin-icon.png" alt="">
+                        </span>ADDRESS DESCRIPTION
                     </a>
                 </li>
             </ul>
+            <!-- Mobilde gösterilecek alan bitişi -->
         </nav>
     </div>
+    <!-- Mobilde gösterilecek alan başlangıcı -->
     <a ng-if="mobile" id="mobileMenu" href="#" class="btn-hamburger">
         <div></div>
         <div></div>
         <div></div>
     </a>
+    <!-- Mobilde gösterilecek alan bitişi -->
 </header>
     <!-- Header end -->
 
     <section class="content">
-        <div class="container-fluid">
+        <!-- Masaüstünde gösterilecek alan başlangıcı -->
+        <div ng-if="desktop" class="container-fluid">
             <div class="breadcrumbs">
                 <ul class="container">
                     <li>
@@ -154,83 +169,175 @@
                 </ul>
             </div>
         </div>
+        <!-- Masaüstünde gösterilecek alan bitişi -->
+        <!-- Mobilde gösterilecek alan başlangıcı -->
+        <div ng-if="mobile" class="container-fluid">
+            <div class="accordion">
+                <a href="#" class="slide wow slideInLeft" data-wow-offset="0" data-wow-duration="1s" data-wow-delay="0s" data-accordion-slide="1">
+                    <div class="inside" style="background-image: url(images/slide1.jpg);">
+                        <h1>HAIR TRANSPLANT</h1>
+                        <div ng-if="desktop" class="hide-texts">
+                            <h2>HAIR TRANSPLANT</h2>
+                            <ul>
+                                <li>List 1</li>
+                                <li>List 2</li>
+                                <li>List 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="slide wow slideInLeft" data-wow-offset="0" data-wow-duration="1s" data-wow-delay="0.3s" data-accordion-slide="2">
+                    <div style="background-image:url(images/slide2.jpg);" class="inside">
+                        <h1>WHOLE BODY SURGERY</h1>
+                        <div ng-if="desktop" class="hide-texts">
+                            <h2>HAIR TRANSPLANT</h2>
+                            <ul>
+                                <li>List 1</li>
+                                <li>List 2</li>
+                                <li>List 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="slide wow slideInLeft" data-wow-offset="0" data-wow-duration="1s" data-wow-delay="0.5s" data-accordion-slide="3">
+                    <div class="inside" style="background-image: url(images/slide3.jpg);">
+                        <h1>COSMETIC DENTISTRY</h1>
+                        <div ng-if="desktop" class="hide-texts">
+                            <h2>HAIR TRANSPLANT</h2>
+                            <ul>
+                                <li>List 1</li>
+                                <li>List 2</li>
+                                <li>List 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <ul class="slider-thumb">
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <!-- Mobilde gösterilecek alan bitişi -->
+
         <div class="container">
-            <div class="hero-detail-main">
+            <!-- Masaüstünde gösterilecek alan başlangıcı -->
+
+            <div ng-if="desktop" class="hero-detail-main">
                 <h2>Why Hair Transplantation?</h2>
                 <p> Hair transplantation is widely considered to be the most effective option for restoring hair because it's
                     a permanent, relatively simple procedure, and it achieves a natural look.
                 </p>
             </div>
+            <!-- Masaüstünde gösterilecek alan bitişi -->
+
             <div class="container">
 
                 <!-- Editörden gelecek içerik -->
-                <!-- Örnek içerik -->
-                <h3>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, reiciendis!
-                </h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae vitae repudiandae alias nesciunt, officiis
-                    sint earum amet modi dolores adipisci quaerat in atque ipsam nostrum. Earum odio ullam itaque nemo blanditiis
-                    sed soluta voluptas aut! Cupiditate, eveniet, quos qui culpa adipisci dicta fugit animi corporis voluptate
-                    quas repudiandae similique provident? Labore accusamus est dignissimos, optio cum enim officiis recusandae
-                    similique.
-                </p>
-                <h3>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, reiciendis!
-                </h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae vitae repudiandae alias nesciunt, officiis
-                    sint earum amet modi dolores adipisci quaerat in atque ipsam nostrum. Earum odio ullam itaque nemo blanditiis
-                    sed soluta voluptas aut! Cupiditate, eveniet, quos qui culpa adipisci dicta fugit animi corporis voluptate
-                    quas repudiandae similique provident? Labore accusamus est dignissimos, optio cum enim officiis recusandae
-                    similique.
-                </p>
-                <!-- Örnek içerik -->
+                <!-- Örnek içerik başlangıcı -->
+                <!-- Masaüstünde gösterilecek alan başlangıcı -->
+
+                <div ng-if="desktop">
+                    <h3>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, reiciendis!
+                    </h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae vitae repudiandae alias nesciunt,
+                        officiis sint earum amet modi dolores adipisci quaerat in atque ipsam nostrum. Earum odio ullam itaque
+                        nemo blanditiis sed soluta voluptas aut! Cupiditate, eveniet, quos qui culpa adipisci dicta fugit
+                        animi corporis voluptate quas repudiandae similique provident? Labore accusamus est dignissimos,
+                        optio cum enim officiis recusandae similique.
+                    </p>
+                    <h3>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, reiciendis!
+                    </h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae vitae repudiandae alias nesciunt,
+                        officiis sint earum amet modi dolores adipisci quaerat in atque ipsam nostrum. Earum odio ullam itaque
+                        nemo blanditiis sed soluta voluptas aut! Cupiditate, eveniet, quos qui culpa adipisci dicta fugit
+                        animi corporis voluptate quas repudiandae similique provident? Labore accusamus est dignissimos,
+                        optio cum enim officiis recusandae similique.
+                    </p>
+                </div>
+
+                <!-- Masaüstünde gösterilecek alan bitişi -->
+                <!-- Örnek içerik bitişi -->
                 <ul class="categories">
                     <li class="col-sm-4">
                         <a href="#">
                             <img src="images/box-img-1.jpg" alt="">
                             <h4>FUE Hair Transplant</h4>
-                            <p>The FUE method of Hair Transplantation involves the transferring of follicles from the donor
+                            <!-- Masaüstünde gösterilecek alan başlangıcı -->
+                            <p ng-if="desktop">The FUE method of Hair Transplantation involves the transferring of follicles from the donor
                                 area to the area affected by hair loss. </p>
+                            <!-- Masaüstünde gösterilecek alan bitişi -->
+
+
                         </a>
                     </li>
                     <li class="col-sm-4">
                         <a href="#">
                             <img src="images/box-img-2.jpg" alt="">
                             <h4>FUE Hair Transplant</h4>
-                            <p>The FUE method of Hair Transplantation involves the transferring of follicles from the donor
+                            <!-- Masaüstünde gösterilecek alan başlangıcı -->
+                            <p ng-if="desktop">The FUE method of Hair Transplantation involves the transferring of follicles from the donor
                                 area to the area affected by hair loss. </p>
+                            <!-- Masaüstünde gösterilecek alan bitişi -->
+
+
                         </a>
                     </li>
                     <li class="col-sm-4">
                         <a href="#">
                             <img src="images/box-img-3.jpg" alt="">
                             <h4>FUE Hair Transplant</h4>
-                            <p>The FUE method of Hair Transplantation involves the transferring of follicles from the donor
+                            <!-- Masaüstünde gösterilecek alan başlangıcı -->
+                            <p ng-if="desktop">The FUE method of Hair Transplantation involves the transferring of follicles from the donor
                                 area to the area affected by hair loss. </p>
+                            <!-- Masaüstünde gösterilecek alan bitişi -->
+
+
                         </a>
                     </li>
                     <li class="col-sm-4">
                         <a href="#">
                             <img src="images/box-img-1.jpg" alt="">
                             <h4>FUE Hair Transplant</h4>
-                            <p>The FUE method of Hair Transplantation involves the transferring of follicles from the donor
+                            <!-- Masaüstünde gösterilecek alan başlangıcı -->
+                            <p ng-if="desktop">The FUE method of Hair Transplantation involves the transferring of follicles from the donor
                                 area to the area affected by hair loss. </p>
+                            <!-- Masaüstünde gösterilecek alan bitişi -->
+
+
                         </a>
                     </li>
                     <li class="col-sm-4">
                         <a href="#">
                             <img src="images/box-img-2.jpg" alt="">
                             <h4>FUE Hair Transplant</h4>
-                            <p>The FUE method of Hair Transplantation involves the transferring of follicles from the donor
+                            <!-- Masaüstünde gösterilecek alan başlangıcı -->
+                            <p ng-if="desktop">The FUE method of Hair Transplantation involves the transferring of follicles from the donor
                                 area to the area affected by hair loss. </p>
+                            <!-- Masaüstünde gösterilecek alan bitişi -->
+
+
                         </a>
                     </li>
                     <li class="col-sm-4">
                         <a href="#">
                             <img src="images/box-img-3.jpg" alt="">
                             <h4>FUE Hair Transplant</h4>
-                            <p>The FUE method of Hair Transplantation involves the transferring of follicles from the donor
+                            <!-- Masaüstünde gösterilecek alan başlangıcı -->
+                            <p ng-if="desktop">The FUE method of Hair Transplantation involves the transferring of follicles from the donor
                                 area to the area affected by hair loss. </p>
+                            <!-- Masaüstünde gösterilecek alan bitişi -->
+
+
                         </a>
                     </li>
                 </ul>
@@ -267,7 +374,8 @@
         </div>
     </section>
     <!-- Footer start-->
-    <footer ng-if="desktop">
+    <!-- Masaüstünde gösterilecek alan başlangıcı -->
+<footer ng-if="desktop">
     <div class="container-fluid">
         <div class="foot-inner">
             <div class="pull-left">
@@ -337,8 +445,11 @@
         </div>
     </div>
 </footer>
+<!-- Masaüstünde gösterilecek alan bitişi -->
+<!-- Mobilde gösterilecek alan başlangıcı -->
+
 <div class="mobile-footer" ng-if="mobile">
-    
+
     <a href="#" id="mobileFooterMenu" class="btn-hamburger">
         <div></div>
         <div></div>
@@ -346,6 +457,9 @@
         <span class="hamburger-text">Communication</span>
     </a>
 </div>
+<!-- Mobilde gösterilecek alan bitişi -->
+<!-- Masaüstünde gösterilecek alan başlangıcı -->
+
 <div ng-if="desktop" class="messagge">
     <div class="messagge-header">
         <span class="messagge-icon">
@@ -374,14 +488,17 @@
     </div>
     <div class="messagge-footer">
         <button class="btn btn-messagge" type="submit">
-            <i class="fa fa-paper-plane"></i><span>Mail Gönder</span>
+            <i class="fa fa-paper-plane"></i>
+            <span>Mail Gönder</span>
         </button>
     </div>
 </div>
+<!-- Masaüstünde gösterilecek alan bitişi -->
+
 <a class="scroll-up">
     <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
 </a>
-<!-- Scripts here -->
+<!-- Scripts -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/wow.js"></script>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vera Clinic</title>
-    <!-- head here -->
+    <!-- head -->
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/fontawesome-all.css">
 <link rel="stylesheet" href="css/styles.css">
@@ -15,12 +15,16 @@
 </head>
 
 <body>
-    <!-- Header start -->
+    <!-- Header başlangıcı -->
     <header class="header container-fluid">
     <div class="header__logo">
-        <a href="#" class="logo">
+        <a href="/" class="logo">
+            <!-- Masaüstünde gösterilecek alan başlangıcı -->
             <img ng-if="desktop" src="images/logo.png" alt="" class="logo__img">
+            <!-- Masaüstünde gösterilecek alan bitişi -->
+            <!-- Mobilde gösterilecek alan başlangıcı -->
             <img ng-if="mobile" src="images/mobile-logo.png" alt="" class="logo__img">
+            <!-- Mobilde gösterilecek alan bitişi -->
         </a>
     </div>
     <div class="pull-right">
@@ -55,28 +59,28 @@
                     </ul>
                 </li>
                 <li class="menu__list-item">
-                    <a href="detail.html" class="menu__link">
+                    <a href="detail_main.html" class="menu__link">
                         PROCEDURES
 
                     </a>
                     <ul class="submenu">
                         <li class="submenu__list-item">
-                            <a href="#" class="submenu__link">
+                            <a href="detail.html" class="submenu__link">
                                 Link 1
                             </a>
                         </li>
                         <li class="submenu__list-item">
-                            <a href="#" class="submenu__link">
+                            <a href="detail.html" class="submenu__link">
                                 Link 2
                             </a>
                         </li>
                         <li class="submenu__list-item">
-                            <a href="#" class="submenu__link">
+                            <a href="detail.html" class="submenu__link">
                                 Link 3
                             </a>
                         </li>
                         <li class="submenu__list-item">
-                            <a href="#" class="submenu__link">
+                            <a href="detail.html" class="submenu__link">
                                 Link 4
                             </a>
                         </li>
@@ -113,36 +117,47 @@
                     </a>
                 </li>
             </ul>
+            <!-- Mobilde gösterilecek alan başlangıcı -->
             <ul ng-if="mobile" class="menu" id="footerMenu">
                 <li class="menu__list-item">
                     <a href="index.html" class="menu__link">
-                        <i class="fab fa-whatsapp"></i>WHATSAPP
+                        <span class="icon-whatsapp">
+                            <img src="images/whatsapp-icon.png" alt="">
+                        </span>WHATSAPP
                     </a>
                 </li>
                 <li class="menu__list-item">
                     <a href="index.html" class="menu__link">
-                        <i class="far fa-envelope"></i>MAIL
+                        <span class="icon-mail">
+                            <img src="images/mail-icon.png" alt="">
+                        </span>MAIL
                     </a>
                 </li>
                 <li class="menu__list-item">
                     <a href="index.html" class="menu__link">
-                            <i class="fas fa-map-pin"></i>ADDRESS DESCRIPTION
+                        <span class="icon-pin">
+                            <img src="images/pin-icon.png" alt="">
+                        </span>ADDRESS DESCRIPTION
                     </a>
                 </li>
             </ul>
+            <!-- Mobilde gösterilecek alan bitişi -->
         </nav>
     </div>
+    <!-- Mobilde gösterilecek alan başlangıcı -->
     <a ng-if="mobile" id="mobileMenu" href="#" class="btn-hamburger">
         <div></div>
         <div></div>
         <div></div>
     </a>
+    <!-- Mobilde gösterilecek alan bitişi -->
 </header>
-    <!-- Header end -->
+    <!-- Header bitişi -->
     <section class="content">
         <div class="container-fluid">
 
             <div class="accordion">
+                <!-- Masaüstünde gösterilecek alan başlangıcı -->
                 <div ng-if="desktop" class="spot">
                     <div class="spot__head">
                         <h1 class="title">Countries where we received our patients</h1>
@@ -177,8 +192,7 @@
                         </li>
                     </ul>
                 </div>
-
-
+                <!-- Masaüstünde gösterilecek alan bitişi -->
 
                 <a href="#" class="slide wow slideInLeft" data-wow-offset="0" data-wow-duration="1s" data-wow-delay="0s" data-accordion-slide="1">
                     <div class="inside" style="background-image: url(images/slide1.jpg);">
@@ -220,6 +234,8 @@
                     </div>
                 </a>
             </div>
+            <!-- Mobilde gösterilecek alan başlangıcı -->
+
             <ul ng-if="mobile" class="slider-thumb">
                 <li>
                     <a href="#"></a>
@@ -231,10 +247,48 @@
                     <a href="#"></a>
                 </li>
             </ul>
+            <div class="welcome" ng-if="mobile">
+                <h2>
+                    Welcome to Vera Clinic
+                </h2>
+                <p>
+                    We provide affordable medical treatments for patients from all over the world by internationally certified surgeons at best
+                    in class hospitals in Turkey at a fraction of the cost in UK. We provide the following services for our
+                    patients to make their travel more comfortable.
+                </p>
+                <ul class="list-clinic">
+                    <li>
+                        <img src="images/house-icon.png" alt="Accommodation">
+                        <h3>Accommodation</h3>
+                    </li>
+                    <li>
+                        <img src="images/medical-icon.png" alt="Medical Pack">
+                        <h3>Medical Pack</h3>
+                    </li>
+                    <li>
+                        <img src="images/car-icon.png" alt="Transportation">
+                        <h3>Transportation</h3>
+                    </li>
+                    <li>
+                        <img src="images/heart-icon.png" alt="PRP">
+                        <h3>PRP</h3>
+                    </li>
+                    <li>
+                        <img src="images/translate-icon.png" alt="Translation Services">
+                        <h3>Translation Services</h3>
+                    </li>
+                    <li>
+                        <img src="images/guarantee-icon.png" alt="Guarantee Certificate">
+                        <h3>Guarantee Certificate</h3>
+                    </li>
+                </ul>
+            </div>
+            <!-- Mobilde gösterilecek alan bitişi -->
         </div>
     </section>
-    <!-- Footer start-->
-    <footer ng-if="desktop">
+    <!-- Footer başlangıcı-->
+    <!-- Masaüstünde gösterilecek alan başlangıcı -->
+<footer ng-if="desktop">
     <div class="container-fluid">
         <div class="foot-inner">
             <div class="pull-left">
@@ -304,8 +358,11 @@
         </div>
     </div>
 </footer>
+<!-- Masaüstünde gösterilecek alan bitişi -->
+<!-- Mobilde gösterilecek alan başlangıcı -->
+
 <div class="mobile-footer" ng-if="mobile">
-    
+
     <a href="#" id="mobileFooterMenu" class="btn-hamburger">
         <div></div>
         <div></div>
@@ -313,6 +370,9 @@
         <span class="hamburger-text">Communication</span>
     </a>
 </div>
+<!-- Mobilde gösterilecek alan bitişi -->
+<!-- Masaüstünde gösterilecek alan başlangıcı -->
+
 <div ng-if="desktop" class="messagge">
     <div class="messagge-header">
         <span class="messagge-icon">
@@ -341,14 +401,17 @@
     </div>
     <div class="messagge-footer">
         <button class="btn btn-messagge" type="submit">
-            <i class="fa fa-paper-plane"></i><span>Mail Gönder</span>
+            <i class="fa fa-paper-plane"></i>
+            <span>Mail Gönder</span>
         </button>
     </div>
 </div>
+<!-- Masaüstünde gösterilecek alan bitişi -->
+
 <a class="scroll-up">
     <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
 </a>
-<!-- Scripts here -->
+<!-- Scripts -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/wow.js"></script>
@@ -358,7 +421,7 @@
 <script src="js/mainCtrl.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2V7XQtDZSOvcJzylGchYrL8nqzfsTsFg"></script>
 <script src="js/scripts.js"></script>
-    <!-- Footer end -->
+    <!-- Footer bitişi -->
 </body>
 
 </html>

@@ -12,12 +12,13 @@
 </head>
 
 <body>
-    <!-- Header start -->
+    <!-- Header başlangıcı -->
     @import "header.html"
-    <!-- Header end -->
+    <!-- Header bitişi -->
 
     <section class="content">
-        <div class="container-fluid">
+        <!-- Masaüstünde gösterilecek alan başlangıcı -->
+        <div ng-if="desktop" class="container-fluid">
             <div class="breadcrumbs">
                 <ul class="container">
                     <li>
@@ -29,8 +30,67 @@
                 </ul>
             </div>
         </div>
+        <!-- Masaüstünde gösterilecek alan bitişi -->
+        <!-- Mobilde gösterilecek alan başlangıcı -->
+        <div ng-if="mobile" class="container-fluid">
+            <div class="accordion">
+                <a href="#" class="slide wow slideInLeft" data-wow-offset="0" data-wow-duration="1s" data-wow-delay="0s" data-accordion-slide="1">
+                    <div class="inside" style="background-image: url(images/slide1.jpg);">
+                        <h1>HAIR TRANSPLANT</h1>
+                        <div ng-if="desktop" class="hide-texts">
+                            <h2>HAIR TRANSPLANT</h2>
+                            <ul>
+                                <li>List 1</li>
+                                <li>List 2</li>
+                                <li>List 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="slide wow slideInLeft" data-wow-offset="0" data-wow-duration="1s" data-wow-delay="0.3s" data-accordion-slide="2">
+                    <div style="background-image:url(images/slide2.jpg);" class="inside">
+                        <h1>WHOLE BODY SURGERY</h1>
+                        <div ng-if="desktop" class="hide-texts">
+                            <h2>HAIR TRANSPLANT</h2>
+                            <ul>
+                                <li>List 1</li>
+                                <li>List 2</li>
+                                <li>List 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="slide wow slideInLeft" data-wow-offset="0" data-wow-duration="1s" data-wow-delay="0.5s" data-accordion-slide="3">
+                    <div class="inside" style="background-image: url(images/slide3.jpg);">
+                        <h1>COSMETIC DENTISTRY</h1>
+                        <div ng-if="desktop" class="hide-texts">
+                            <h2>HAIR TRANSPLANT</h2>
+                            <ul>
+                                <li>List 1</li>
+                                <li>List 2</li>
+                                <li>List 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <ul class="slider-thumb">
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+        </div>
+        <!-- Mobilde gösterilecek alan bitişi -->
+        
         <div class="container">
-            <div class="hero-detail">
+
+            <div ng-if="desktop" class="hero-detail">
                 <img src="images/detail-foto.png" alt="">
             </div>
             <div class="container">
@@ -38,7 +98,7 @@
                 <!-- Editörden gelecek içerik -->
                 <!-- Örnek içerik -->
                 <h3>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, reiciendis!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, reicibitişiis!
                 </h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae vitae repudiandae alias nesciunt, officiis
                     sint earum amet modi dolores adipisci quaerat in atque ipsam nostrum. Earum odio ullam itaque nemo blanditiis
@@ -47,7 +107,7 @@
                     similique.
                 </p>
                 <h3>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, reiciendis!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, reicibitişiis!
                 </h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae vitae repudiandae alias nesciunt, officiis
                     sint earum amet modi dolores adipisci quaerat in atque ipsam nostrum. Earum odio ullam itaque nemo blanditiis
@@ -61,9 +121,9 @@
 
         </div>
     </section>
-    <!-- Footer start-->
+    <!-- Footer başlangıcı-->
     @import "footer.html"
-    <!-- Footer end -->
+    <!-- Footer bitişi -->
 </body>
 
 </html>

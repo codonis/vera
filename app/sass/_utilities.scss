@@ -31,3 +31,8 @@
     }
 }
 
+.no-tmargin-mobile.container-fluid{
+    @include customBreakpoint(768px) {
+        margin-top: 0;
+    }
+}

@@ -82,6 +82,7 @@
         }
     }
     &-results {
+        list-style-type: none;
         li {
             a {
                 border: 1px solid $lighter_gray_color;
@@ -108,6 +109,32 @@
                 img {
                     width: 100%;
                     margin-top: 10px;
+                }
+            }
+        }
+    }
+    @include customBreakpoint(768px) {
+        width: 100%;
+        h3{
+            font-size: 16px;
+        }
+        &-content{
+            padding-right: 15px;
+        }
+        h4 {
+            font-size: 14px;
+            padding: 0;
+        }
+        &-results{
+            margin: 0 -15px;
+            li{
+                a{
+                    min-height: 360px;
+                    h4{
+                        span{
+                            line-height: 1.6;
+                        }
+                    }
                 }
             }
         }

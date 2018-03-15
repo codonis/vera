@@ -54,3 +54,13 @@
         }
     }
 }
+.welcome {
+    h2 {
+        font-size: 16px;
+        font-family: $medium_font;
+    }
+    p{
+        font-size: 12px;
+        color: inherit;
+    }
+}

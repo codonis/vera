@@ -212,9 +212,12 @@ footer {
     }
     @include customBreakpoint(768px) {
         z-index: 20;
-        color: #fff;
         bottom: 5px;
         right: 15px;
+        &,
+        &:hover {
+            color: #fff;
+        }
     }
 }
 
@@ -228,7 +231,7 @@ footer {
     .hamburger-text {
         color: #fff;
         position: absolute;
-        right: -42px;   
+        right: -42px;
         width: 100%;
         font-size: 12px;
     }

@@ -19,10 +19,11 @@
     <section class="content">
         <div class="container-fluid">
 
-            <div class="hero">
+            <!-- Masaüstünde gösterilecek alan başlangıcı -->
+            <div ng-if="desktop" class="hero">
                 <img src="images/about-hero.jpg" alt="">
             </div>
-            <div class="breadcrumbs">
+            <div ng-if="desktop" class="breadcrumbs">
                 <ul class="container">
                     <li>
                         <a href="#">Homepage</a>
@@ -32,17 +33,24 @@
                     </li>
                 </ul>
             </div>
-            <div class="container">
-                <div class="top-entry">
-                    <p>
-                        We are an international clinic providing affordable medical treatments for patients from all over the world by internationally
-                        certified surgeons at best in class hospitals in Turkey at a fraction of the cost in the USA. Our
-                        goal is to provide you a medical treatment beyond your expectations and grow our reputation by your
-                        good recommendations.
-                    </p>
-                </div>
-            </div>
 
+            <!-- Masaüstünde gösterilecek alan bitişi -->
+            <!-- Mobilde gösterilecek alan başlangıcı -->
+            <div class="hero-top-mobile" ng-if="mobile" style="background-image:url(images/aboutus.jpg)">
+
+            </div>
+            <!-- Mobilde gösterilecek alan bitişi -->
+        </div>
+
+
+        <div class="container">
+            <div class="top-entry">
+                <p>
+                    We are an international clinic providing affordable medical treatments for patients from all over the world by internationally
+                    certified surgeons at best in class hospitals in Turkey at a fraction of the cost in the USA. Our goal
+                    is to provide you a medical treatment beyond your expectations and grow our reputation by your good recommendations.
+                </p>
+            </div>
         </div>
     </section>
     <!-- Footer start-->

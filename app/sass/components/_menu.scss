@@ -11,6 +11,10 @@
         font-size: 14px;
         padding: 15px 0;
         text-align: center;
+        i{
+            transition: .3s;
+        }
+
         @include customBreakpoint(1024px) {
             margin-right: 8px;
             margin-left: 8px;
@@ -37,6 +41,9 @@
         &:hover {
             &:after {
                 width: 80%;
+            }
+            i{
+                transform:rotate(-90deg);
             }
         }
     }
@@ -72,6 +79,7 @@
         height: 50vh;
         transition: .3s;
         overflow: auto;
+        box-shadow: rgba(0,0,0,0.3) 3px 0px 5px;
         &__list-item {
             display: block;
             &:nth-last-child(2) a.menu__link {
@@ -81,6 +89,10 @@
                     
                 }
             }
+            [class^=icon-] {
+                width: 55px;
+                display: inline-block;text-align: center;
+            }
         }
         &__link {
             width: 100%;
@@ -89,16 +101,21 @@
             position: relative;
             border-bottom: 1px solid $light_gray_color;
             margin: 0;
-            font-size: 18px;
+            font-size: 16px;
             font-family: $bold_font;
             #footerMenu & {
                 i{
                     margin-right: 15px;
-                    font-size: 55px;
+                    font-size: 31px;
                 }
             }
             &:after {
                 display: none;
+            }
+            &:hover {
+                i{
+                    transform:rotate(0deg);
+                }
             }
         }
         &__icon_submenu {
@@ -121,6 +138,7 @@
             margin-bottom: 0;
             transition: .3s;
         }
+
     }
 }
 
@@ -171,5 +189,8 @@
             color: #fff;
             background-color: darken($primary_color, 10%);
         }
+    }
+    @include customBreakpoint(768px) {
+        top: 50px;
     }
 }

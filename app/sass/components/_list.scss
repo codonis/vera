@@ -58,4 +58,24 @@
             }
         }
     }
+    &-clinic {
+        list-style-type: none;
+        margin-top: 25px;
+        li{
+            width: 48.5%;
+            /* padding-left: 10px;
+            padding-right: 10px; */
+            display: inline-block;
+            margin-bottom: 28px;
+            img{
+                max-width: 25px;
+            }
+        }
+        h3{
+            margin: 0;
+            padding: 0;
+            font-size: 11px;
+            display: inline-block;
+        }
+    }
 }

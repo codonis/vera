@@ -2,6 +2,9 @@ html,
 body {
     position: relative;
     font-family: $regular_font;
+    @include customBreakpoint(768px) {
+        overflow-x: hidden;
+    }
 }
 
 body {

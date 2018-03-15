@@ -11,4 +11,11 @@
         margin: 0;
         font-size: 30px;
     }
+    @include customBreakpoint(768px) {
+        margin: 0 -15px;
+        padding: 20px 55px 20px 30px;
+        h1 {
+            font-size: 16px;
+        }
+    }
 }

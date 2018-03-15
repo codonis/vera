@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr" ng-app="app" ng-controller="mainCtrl">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +16,10 @@
     <!-- Header end -->
 
     <section class="content">
-        <div class="container-fluid">
-            <div class="breadcrumbs">
+        <div class="container-fluid no-tmargin-mobile">
+            <!-- Masaüstünde gösterilecek alan başlangıcı -->
+
+            <div ng-if="desktop" class="breadcrumbs">
                 <ul class="container">
                     <li>
                         <a href="#">Homepage</a>
@@ -34,6 +35,12 @@
                     </li>
                 </ul>
             </div>
+            <!-- Masaüstünde gösterilecek alan bitişi -->
+            <!-- Mobilde gösterilecek alan başlangıcı -->
+            <div class="hero-top-mobile subpage" ng-if="mobile" style="background-image:url(images/aboutus.jpg)">
+
+            </div>
+            <!-- Mobilde gösterilecek alan bitişi -->
             <div class="ba-head">
                 <h1>BEFORE & AFTER PICTURES</h1>
             </div>
